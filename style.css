@@ -1,3 +1,94 @@
-body { font-family: sans-serif; background-color: #f4f4f4; color: #333; padding: 20px; }
-.comando { background: white; padding: 15px; margin-bottom: 10px; border-left: 5px solid #2ecc71; border-radius: 4px; }
-h1 { color: #2c3e50; }
+/* Reset global y fuentes modernas */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    color: #f8fafc;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #f1502f 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Contenedor principal */
+#contenedor {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Tarjetas de comandos */
+.comando {
+    background-color: #1e293b;
+    padding: 20px 24px;
+    border-radius: 12px;
+    border-left: 5px solid #f1502f;
+    /* Color oficial de Git */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.comando:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+    border-left-color: #60a5fa;
+}
+
+h2 {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color: #38bdf8;
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: "$ ";
+    color: #f1502f;
+    margin-right: 6px;
+    user-select: none;
+}
+
+p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
